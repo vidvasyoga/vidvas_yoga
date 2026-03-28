@@ -1,0 +1,447 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Vidvas Yoga · Preethi</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+*,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
+:root{
+  --rose:#C4785A;
+  --rose-light:#F7EDE6;
+  --rose-pale:#FDF8F5;
+  --rose-mid:#EDD5C8;
+  --bark:#1E110A;
+  --sage:#7A9E76;
+  --sage-light:#EDF4EC;
+  --cream:#FFFCFA;
+  --muted:#6B4D3E;
+  --text:#1E110A;
+  --border:rgba(196,120,90,0.18);
+  --white:#FFFFFF;
+}
+html{scroll-behavior:smooth;}
+body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--text);overflow-x:hidden;}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:100;
+  display:flex;align-items:center;justify-content:space-between;
+  padding:1.1rem 4rem;
+  background:rgba(255,252,250,0.95);
+  backdrop-filter:blur(14px);
+  border-bottom:1px solid var(--border);
+}
+.logo{font-family:'Playfair Display',serif;font-size:1.4rem;font-weight:700;color:var(--bark);text-decoration:none;}
+.logo span{color:var(--rose);}
+.nav-links{display:flex;gap:2rem;list-style:none;}
+.nav-links a{font-size:0.78rem;font-weight:600;letter-spacing:0.09em;text-transform:uppercase;color:var(--muted);text-decoration:none;transition:color 0.3s;}
+.nav-links a:hover{color:var(--rose);}
+.nav-cta{font-size:0.78rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;color:var(--white);background:var(--rose);padding:0.65rem 1.6rem;border-radius:30px;text-decoration:none;transition:background 0.3s;}
+.nav-cta:hover{background:#a85f44;}
+
+/* HERO */
+.hero{background:var(--rose-pale);padding:100px 5rem 3rem;display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:center;}
+.hero-left{padding-bottom:0;}
+.hero-for{display:inline-flex;align-items:center;gap:8px;background:var(--rose-light);border:1px solid rgba(196,120,90,0.3);border-radius:30px;padding:0.45rem 1rem;font-size:0.75rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;color:var(--rose);margin-bottom:1.4rem;}
+.hero-title{font-family:'Playfair Display',serif;font-size:clamp(2.8rem,4.5vw,4.8rem);font-weight:700;line-height:1.08;color:var(--bark);margin-bottom:1.4rem;}
+.hero-title em{font-style:italic;color:var(--rose);}
+.hero-sub{font-size:1rem;font-weight:400;line-height:1.85;color:var(--muted);max-width:460px;margin-bottom:1.4rem;}
+.for-whom{display:flex;flex-direction:column;gap:0.5rem;margin-bottom:1.5rem;}
+.for-item{display:flex;align-items:center;gap:10px;font-size:0.88rem;font-weight:500;color:var(--bark);}
+.for-dot{width:7px;height:7px;border-radius:50%;background:var(--rose);flex-shrink:0;}
+.class-pills{display:flex;flex-wrap:wrap;gap:8px;}
+.cpill{font-size:0.72rem;font-weight:600;letter-spacing:0.04em;padding:0.4rem 0.9rem;border-radius:30px;background:var(--white);border:1px solid var(--border);color:var(--muted);}
+
+.hero-right{display:flex;flex-direction:column;justify-content:center;gap:1rem;}
+.timings-card{background:var(--white);border:1px solid var(--border);border-radius:14px;padding:1.8rem;box-shadow:0 4px 24px rgba(196,120,90,0.07);}
+.timings-label{font-size:0.68rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--rose);margin-bottom:1rem;display:block;}
+.timing-rows{display:flex;flex-direction:column;gap:0.75rem;}
+.timing-row-item{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem;background:var(--rose-pale);border:1px solid rgba(196,120,90,0.15);border-radius:8px;}
+.tr-time{font-size:0.9rem;font-weight:600;color:var(--bark);}
+.tr-badge{font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--rose);background:var(--rose-light);padding:0.25rem 0.7rem;border-radius:30px;}
+.timings-note{font-size:0.75rem;font-weight:400;color:var(--muted);margin-top:1rem;text-align:center;}
+.batch-info-card{background:var(--bark);border-radius:14px;padding:1.5rem 1.8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
+.bic-item{display:flex;flex-direction:column;gap:3px;}
+.bic-label{font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,252,250,0.4);}
+.bic-val{font-size:0.85rem;font-weight:500;color:rgba(255,252,250,0.85);}
+
+/* COMMON */
+section{padding:4rem 5rem;}
+.tag{font-size:0.68rem;font-weight:600;letter-spacing:0.18em;text-transform:uppercase;color:var(--rose);display:block;margin-bottom:0.8rem;}
+.sec-title{font-family:'Playfair Display',serif;font-size:clamp(2rem,3vw,3rem);font-weight:700;line-height:1.15;color:var(--bark);margin-bottom:1.2rem;}
+.sec-body{font-size:0.92rem;font-weight:400;line-height:1.9;color:var(--muted);}
+
+/* STATS */
+.stats-band{background:var(--rose);padding:2.5rem 5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;}
+.stat-card{text-align:center;}
+.stat-card .big{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:var(--white);display:block;line-height:1;margin-bottom:0.4rem;}
+.stat-card .desc{font-size:0.78rem;font-weight:400;color:rgba(255,252,250,0.75);line-height:1.6;}
+
+/* WHY YOGA */
+.why{background:var(--white);}
+.why-inner{display:grid;grid-template-columns:1fr 1fr;gap:5rem;align-items:center;}
+.why-cards{display:flex;flex-direction:column;gap:1rem;}
+.why-card{display:flex;align-items:flex-start;gap:1rem;padding:1.1rem 1.2rem;background:var(--rose-pale);border:1px solid var(--border);border-radius:10px;}
+.why-icon{width:38px;height:38px;border-radius:50%;background:var(--rose-light);display:flex;align-items:center;justify-content:center;flex-shrink:0;font-size:15px;}
+.why-card h4{font-size:0.88rem;font-weight:600;color:var(--bark);margin-bottom:3px;}
+.why-card p{font-size:0.78rem;font-weight:400;color:var(--muted);line-height:1.65;}
+
+/* ABOUT */
+.about{background:var(--rose-pale);}
+.about-grid{display:grid;grid-template-columns:1.1fr 1fr;gap:5rem;align-items:start;}
+.about-content .sec-body{margin-bottom:0.9rem;}
+.about-quote{border-left:3px solid var(--rose);padding:0.9rem 1.2rem;margin:1.8rem 0;background:var(--rose-light);border-radius:0 8px 8px 0;}
+.about-quote p{font-family:'Playfair Display',serif;font-style:italic;font-size:1.05rem;color:var(--bark);line-height:1.7;font-weight:500;}
+.cert-tags{display:flex;flex-wrap:wrap;gap:8px;margin-top:1.5rem;}
+.cert{font-size:0.7rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;padding:0.35rem 0.9rem;background:var(--white);border:1px solid rgba(196,120,90,0.3);border-radius:30px;color:var(--rose);}
+.about-visual{background:var(--rose-light);border-radius:14px;padding:2.2rem;display:flex;flex-direction:column;gap:0.9rem;}
+.av-title{font-family:'Playfair Display',serif;font-size:1.1rem;font-weight:700;color:var(--bark);margin-bottom:0.2rem;}
+.av-sub{font-size:0.82rem;font-weight:400;color:var(--muted);margin-bottom:0.3rem;line-height:1.7;}
+.av-item{display:flex;align-items:center;gap:10px;background:var(--white);border:1px solid var(--border);border-radius:8px;padding:0.8rem 1rem;font-size:0.84rem;font-weight:500;color:var(--bark);}
+.av-dot{width:7px;height:7px;border-radius:50%;background:var(--rose);flex-shrink:0;}
+
+/* CLASSES */
+.classes{background:var(--white);}
+.class-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:0.7rem;margin-top:1.2rem;}
+.class-card{background:var(--rose-pale);border:1px solid var(--border);border-radius:10px;padding:0.9rem 1rem;display:flex;align-items:center;gap:0.75rem;transition:all 0.3s;}
+.class-card:hover{border-color:var(--rose);}
+.cc-icon{width:32px;height:32px;border-radius:50%;background:var(--rose-light);display:flex;align-items:center;justify-content:center;font-size:14px;flex-shrink:0;}
+.class-card h3{font-size:0.85rem;font-weight:600;color:var(--bark);margin:0;}
+
+/* WELLNESS */
+.wellness{background:var(--sage-light);}
+.wellness-grid{display:grid;grid-template-columns:1fr 1fr;gap:4rem;align-items:start;margin-top:2.5rem;}
+.wellness-intro{font-size:0.95rem;font-weight:400;line-height:1.9;color:var(--muted);margin-bottom:1.2rem;}
+.concern-list{display:flex;flex-direction:column;gap:0.6rem;margin-bottom:1.5rem;}
+.concern-item{display:flex;align-items:center;gap:10px;font-size:0.88rem;font-weight:500;color:var(--bark);padding:0.7rem 1rem;background:var(--white);border:1px solid rgba(122,158,118,0.2);border-radius:8px;}
+.cdot{width:6px;height:6px;border-radius:50%;background:var(--sage);flex-shrink:0;}
+.benefits-grid{display:flex;flex-direction:column;gap:1rem;}
+.benefit-card{background:var(--white);border:1px solid rgba(122,158,118,0.2);border-radius:10px;padding:1.1rem 1.3rem;display:flex;align-items:flex-start;gap:10px;}
+.benefit-card h4{font-size:0.86rem;font-weight:600;color:var(--bark);margin-bottom:3px;}
+.benefit-card p{font-size:0.76rem;font-weight:400;color:var(--muted);line-height:1.65;}
+.bicon{font-size:16px;flex-shrink:0;margin-top:2px;}
+
+/* TESTIMONIAL */
+.testi{background:var(--bark);padding:3.5rem 5rem;}
+.testi-inner{text-align:center;}
+.testi .tag{color:var(--rose-mid);}
+.quote{font-family:'Playfair Display',serif;font-size:clamp(1.4rem,2.2vw,2rem);font-style:italic;font-weight:500;color:var(--white);max-width:660px;margin:0 auto 1.5rem;line-height:1.6;}
+.cite{font-size:0.75rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,252,250,0.35);}
+
+/* PRICING */
+.pricing{background:var(--white);}
+.pricing-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:1.2rem;margin-top:2.5rem;}
+.price-card{background:var(--rose-pale);border:1px solid var(--border);border-radius:12px;padding:1.8rem 1.4rem;text-align:center;position:relative;transition:all 0.3s;}
+.price-card:hover{transform:translateY(-4px);box-shadow:0 12px 32px rgba(196,120,90,0.1);}
+.price-card.pop{background:var(--rose);border-color:var(--rose);}
+.pop-label{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--bark);color:var(--white);font-size:0.62rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.25rem 0.85rem;border-radius:30px;white-space:nowrap;}
+.plan-dur{font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--rose);margin-bottom:1rem;display:block;}
+.price-card.pop .plan-dur{color:rgba(255,252,250,0.75);}
+.plan-amt{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:var(--bark);line-height:1;}
+.price-card.pop .plan-amt{color:var(--white);}
+.plan-amt sup{font-size:1rem;vertical-align:super;}
+.plan-per{font-size:0.72rem;font-weight:400;color:var(--muted);margin:0.4rem 0 1.2rem;}
+.price-card.pop .plan-per{color:rgba(255,252,250,0.65);}
+.plan-features-list{list-style:none;text-align:left;margin-bottom:1.5rem;}
+.plan-features-list li{font-size:0.78rem;font-weight:400;color:var(--muted);padding:0.4rem 0;border-bottom:1px solid rgba(196,120,90,0.1);display:flex;align-items:center;gap:7px;}
+.price-card.pop .plan-features-list li{color:rgba(255,252,250,0.8);border-bottom-color:rgba(255,252,250,0.1);}
+.plan-features-list li::before{content:'';width:4px;height:4px;border-radius:50%;background:var(--rose);flex-shrink:0;}
+.price-card.pop .plan-features-list li::before{background:rgba(255,252,250,0.7);}
+.plan-cta{display:block;width:100%;padding:0.7rem;font-family:'DM Sans',sans-serif;font-size:0.75rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;text-align:center;border-radius:30px;text-decoration:none;transition:all 0.3s;cursor:pointer;border:1.5px solid var(--rose);color:var(--rose);background:transparent;}
+.plan-cta:hover{background:var(--rose);color:var(--white);}
+.price-card.pop .plan-cta{background:var(--white);color:var(--rose);border-color:var(--white);}
+.price-card.pop .plan-cta:hover{background:rgba(255,252,250,0.88);}
+
+/* FAQ */
+.faq{background:var(--rose-pale);}
+.faq-grid{display:grid;grid-template-columns:1fr 1fr;gap:1rem;margin-top:2.5rem;}
+.faq-item{background:var(--white);border:1px solid var(--border);border-radius:10px;padding:1.3rem 1.4rem;cursor:pointer;transition:border-color 0.3s;}
+.faq-item:hover,.faq-item.open{border-color:var(--rose);}
+.faq-q{font-size:0.88rem;font-weight:600;color:var(--bark);display:flex;justify-content:space-between;align-items:center;gap:1rem;}
+.arrow{font-size:0.8rem;color:var(--rose);flex-shrink:0;transition:transform 0.3s;}
+.faq-item.open .arrow{transform:rotate(180deg);}
+.faq-a{font-size:0.82rem;font-weight:400;line-height:1.8;color:var(--muted);margin-top:0.8rem;display:none;}
+.faq-item.open .faq-a{display:block;}
+
+/* CONTACT */
+.contact{background:var(--white);}
+.contact-inner{max-width:560px;}
+.contact-sub{font-size:0.92rem;font-weight:400;line-height:1.9;color:var(--muted);margin-bottom:2rem;max-width:420px;}
+.cd-row{display:flex;flex-direction:column;gap:3px;margin-bottom:1.1rem;}
+.cd-label{font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--rose);}
+.cd-val{font-size:0.9rem;font-weight:400;color:var(--muted);}
+.contact-ctas{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;}
+.cta-wa{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;background:var(--rose);color:var(--white);padding:0.85rem 1.8rem;border-radius:30px;transition:background 0.3s;}
+.cta-wa:hover{background:#a85f44;}
+.cta-call{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;font-weight:500;letter-spacing:0.06em;text-transform:uppercase;text-decoration:none;border:1.5px solid var(--border);color:var(--muted);padding:0.85rem 1.8rem;border-radius:30px;transition:all 0.3s;}
+.cta-call:hover{border-color:var(--rose);color:var(--rose);}
+
+footer{background:var(--bark);padding:2.5rem 5rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1rem;border-top:1px solid rgba(196,120,90,0.12);}
+.footer-logo{font-family:'Playfair Display',serif;font-size:1.2rem;font-weight:700;color:var(--rose);}
+.footer-copy{font-size:0.72rem;font-weight:400;color:rgba(255,252,250,0.3);}
+.footer-links{display:flex;gap:1.5rem;}
+.footer-links a{font-size:0.72rem;font-weight:500;color:rgba(255,252,250,0.35);text-decoration:none;transition:color 0.3s;}
+.footer-links a:hover{color:var(--rose);}
+
+@keyframes fadeUp{from{opacity:0;transform:translateY(22px);}to{opacity:1;transform:translateY(0);}}
+.hero-left>*{animation:fadeUp 0.65s ease both;}
+.hero-left>*:nth-child(1){animation-delay:0.05s;}
+.hero-left>*:nth-child(2){animation-delay:0.15s;}
+.hero-left>*:nth-child(3){animation-delay:0.25s;}
+.hero-left>*:nth-child(4){animation-delay:0.33s;}
+.hero-left>*:nth-child(5){animation-delay:0.41s;}
+.hero-left>*:nth-child(6){animation-delay:0.49s;}
+
+@media(max-width:960px){
+  nav{padding:1rem 1.5rem;}.nav-links{display:none;}
+  .hero{grid-template-columns:1fr;padding:80px 1.5rem 2rem;}
+  .hero-left{padding-bottom:0;text-align:center;align-items:center;display:flex;flex-direction:column;}
+  .hero-for{align-self:center;}
+  .for-whom{align-items:flex-start;text-align:left;width:100%;}
+  .class-pills{justify-content:center;}
+  section{padding:3rem 1.5rem;}
+  .why-inner,.about-grid,.wellness-grid,.contact-inner{grid-template-columns:1fr;}
+  .class-grid{grid-template-columns:1fr 1fr;}
+  .pricing-grid{grid-template-columns:1fr 1fr;}
+  .faq-grid{grid-template-columns:1fr;}
+  .stats-band{grid-template-columns:1fr 1fr;padding:2rem 1.5rem;}
+  footer{padding:2rem 1.5rem;}
+  .testi{padding:3rem 1.5rem;}
+}
+@media(max-width:540px){.class-grid,.pricing-grid,.stats-band{grid-template-columns:1fr;}}
+</style>
+</head>
+<body>
+
+<nav>
+  <a class="logo" href="#">Vidvas <span>Yoga</span></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#classes">Classes</a></li>
+    <li><a href="#wellness">Wellness</a></li>
+    <li><a href="#pricing">Pricing</a></li>
+    <li><a href="#contact">Contact</a></li>
+  </ul>
+  <a class="nav-cta" href="https://wa.me/917845537403" target="_blank">Join now</a>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <span class="hero-for">🌸 A space made for women · Tamil medium · Live on Zoom</span>
+    <h1 class="hero-title">You are in a<br><em>right place</em></h1>
+    <p class="hero-sub">Irregular cycles, weight that won't shift, mood swings you can't explain — this isn't your fault. Your body just needs the right support. That's exactly what this space offers.</p>
+    <div class="for-whom">
+      <div class="for-item"><div class="for-dot"></div>Women with PCOS or hormonal imbalance</div>
+      <div class="for-item"><div class="for-dot"></div>Those struggling with weight or low energy</div>
+      <div class="for-item"><div class="for-dot"></div>Anyone feeling emotionally drained or burnt out</div>
+      <div class="for-item"><div class="for-dot"></div>Complete beginners — no experience needed at all</div>
+      <div class="for-item"><div class="for-dot"></div>General yoga for fitness · Balance · Strength</div>
+    </div>
+    <div class="class-pills">
+      <span class="cpill">🧘‍♀️ Asana</span>
+      <span class="cpill">🌬️ Pranayama</span>
+      <span class="cpill">🧠 Meditation</span>
+      <span class="cpill">✨ Face yoga</span>
+      <span class="cpill">💆 Therapeutic yoga</span>
+      <span class="cpill">🥗 Food & lifestyle</span>
+    </div>
+  </div>
+
+  <div class="hero-right">
+    <div class="timings-card">
+      <span class="timings-label">Live batch timings · Join any day</span>
+      <div class="timing-rows">
+        <div class="timing-row-item">
+          <span class="tr-time">6:00 – 7:00 am</span>
+          <span class="tr-badge">Early morning</span>
+        </div>
+        <div class="timing-row-item">
+          <span class="tr-time">10:30 – 11:30 am</span>
+          <span class="tr-badge">Mid-morning</span>
+        </div>
+        <div class="timing-row-item">
+          <span class="tr-time">6:30 – 7:30 pm</span>
+          <span class="tr-badge">Evening</span>
+        </div>
+      </div>
+      <p class="timings-note">You can join any ongoing batch on any day 🤎</p>
+    </div>
+    <div class="batch-info-card">
+      <div class="bic-item"><span class="bic-label">Sessions / month</span><span class="bic-val">16 + 2 bonus</span></div>
+      <div class="bic-item"><span class="bic-label">Platform</span><span class="bic-val">Live on Zoom</span></div>
+      <div class="bic-item"><span class="bic-label">Language</span><span class="bic-val">Tamil</span></div>
+      <div class="bic-item"><span class="bic-label">Starting at</span><span class="bic-val">₹1,650 / mo</span></div>
+    </div>
+  </div>
+</div>
+
+<!-- STATS -->
+<div class="stats-band">
+  <div class="stat-card"><span class="big">1000+</span><p class="desc">Women trained and supported on their wellness journey</p></div>
+  <div class="stat-card"><span class="big">98%</span><p class="desc">Success rate in pregnancy outcomes among dedicated students</p></div>
+  <div class="stat-card"><span class="big">99%</span><p class="desc">PCOS reversal for students who practised consistently</p></div>
+  <div class="stat-card"><span class="big">99%</span><p class="desc">Improved emotional stability and better sleep cycle</p></div>
+</div>
+<div style="background:var(--rose);padding:0 5rem 2rem;text-align:center;">
+  <a href="https://www.instagram.com/s/aGlnaGxpZ2h0OjE3OTA4ODEwMzkxODkzMzcw?igsh=MTliZXV3MHQyY3FuZQ==" target="_blank" style="display:inline-flex;align-items:center;gap:8px;font-size:0.8rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--white);background:rgba(255,255,255,0.15);border:1px solid rgba(255,255,255,0.35);padding:0.6rem 1.4rem;border-radius:30px;text-decoration:none;transition:background 0.3s;" onmouseover="this.style.background='rgba(255,255,255,0.25)'" onmouseout="this.style.background='rgba(255,255,255,0.15)'">
+    ⭐ Check our reviews
+  </a>
+</div>
+
+<!-- ABOUT -->
+<section class="about" id="about">
+  <div class="about-grid">
+    <div class="about-content">
+      <span class="tag">About me</span>
+      <h2 class="sec-title">Hi, I'm Preethi 🤎</h2>
+      <p class="sec-body">If you're here, it probably means you're looking for a gentle way to care for your body and mind. I understand that feeling — and I'm glad you found this space.</p>
+      <p class="sec-body" style="margin-top:0.9rem;">I've been practising yoga for over 15 years, and for the last 3 years I've been teaching through live online classes. I learned yoga in the traditional way under Guru Thirumalai, and I truly believe healing begins when we slow down and listen to our body.</p>
+      <div class="about-quote">
+        <p>In my classes, there's no force or pressure — just gentle movement, breath, and a calm space where you can move at your own pace.</p>
+      </div>
+      <div class="cert-tags">
+        <span class="cert">Traditional lineage</span>
+        <span class="cert">Guru Thirumalai</span>
+        <span class="cert">15+ yrs practice</span>
+        <span class="cert">3 yrs online teaching</span>
+        <span class="cert">Tamil medium</span>
+      </div>
+    </div>
+    <div class="about-visual">
+      <p class="av-title">Our specialities 🌸</p>
+      <p class="av-sub">You didn't come here just to stretch — you came here to feel lighter inside. This space is ours.</p>
+      <div class="av-item"><div class="av-dot"></div>Reverse PCOS naturally</div>
+      <div class="av-item"><div class="av-dot"></div>Hormonal balance & cycle health</div>
+      <div class="av-item"><div class="av-dot"></div>Emotional stability & calm</div>
+      <div class="av-item"><div class="av-dot"></div>Weight management</div>
+      <div class="av-item"><div class="av-dot"></div>Pregnancy support & fertility</div>
+      <div class="av-item"><div class="av-dot"></div>Better sleep & energy</div>
+      <div class="av-item"><div class="av-dot"></div>Mindful food & lifestyle habits</div>
+    </div>
+  </div>
+  <!-- CLASS STYLE inside about section -->
+  <div id="classes" style="margin-top:2rem;">
+    <span class="tag">What you'll learn</span>
+    <h2 class="sec-title">Our class style</h2>
+    <div class="class-grid" style="margin-top:1.2rem;">
+      <div class="class-card"><div class="cc-icon">🧘‍♀️</div><h3>Asana</h3></div>
+      <div class="class-card"><div class="cc-icon">🌬️</div><h3>Pranayama</h3></div>
+      <div class="class-card"><div class="cc-icon">🧠</div><h3>Meditation</h3></div>
+      <div class="class-card"><div class="cc-icon">✨</div><h3>Face yoga</h3></div>
+      <div class="class-card"><div class="cc-icon">💆‍♀️</div><h3>Therapeutic yoga</h3></div>
+      <div class="class-card"><div class="cc-icon">🥗</div><h3>Food & lifestyle</h3></div>
+    </div>
+  </div>
+</section>
+
+<!-- WELLNESS -->
+<section class="wellness" id="wellness">
+  <span class="tag">Women's wellness batch</span>
+  <h2 class="sec-title">This space was made for you</h2>
+  <p class="wellness-intro">Irregular cycles. Weight that won't shift. Mood swings you can't explain. This isn't your fault — your body just needs the right support.</p>
+  <p class="wellness-intro" style="font-weight:600;color:var(--bark);font-size:0.9rem;margin-bottom:1rem;">This batch is for women dealing with:</p>
+  <div class="concern-list" style="max-width:560px;">
+    <div class="concern-item"><div class="cdot"></div>Irregular menstrual cycles</div>
+    <div class="concern-item"><div class="cdot"></div>PCOS & hormonal imbalance</div>
+    <div class="concern-item"><div class="cdot"></div>Infertility concerns</div>
+    <div class="concern-item"><div class="cdot"></div>Unexplained weight gain</div>
+    <div class="concern-item"><div class="cdot"></div>Mood swings & emotional burnout</div>
+    <div class="concern-item"><div class="cdot"></div>Low energy & poor sleep</div>
+  </div>
+</section>
+
+<!-- TESTIMONIAL -->
+<div class="testi">
+  <div class="testi-inner">
+    <span class="tag">Our promise 🤎</span>
+    <blockquote class="quote">"You didn't come here just to stretch your body — you came here to feel lighter inside. This space is ours, where we support each other, feel safe, and grow together."</blockquote>
+    <span class="cite">— Preethi · Vidvas Yoga</span>
+  </div>
+</div>
+
+<!-- PRICING -->
+<section class="pricing" id="pricing">
+  <span class="tag">Membership plans</span>
+  <h2 class="sec-title">What we charge</h2>
+  <p class="sec-body" style="max-width:480px;">16 + 2 bonus sessions every month. Live on Zoom in Tamil. Join any ongoing batch — no need to wait.</p>
+  <div class="pricing-grid">
+    <div class="price-card">
+      <span class="plan-dur">Monthly</span>
+      <div class="plan-amt"><sup>₹</sup>1,650</div>
+      <p class="plan-per">per month</p>
+    </div>
+    <div class="price-card pop">
+      <span class="pop-label">Best value</span>
+      <span class="plan-dur">3 Months</span>
+      <div class="plan-amt"><sup>₹</sup>4,499</div>
+      <p class="plan-per">for 3 months</p>
+    </div>
+    <div class="price-card">
+      <span class="plan-dur">6 Months</span>
+      <div class="plan-amt"><sup>₹</sup>8,000</div>
+      <p class="plan-per">for 6 months</p>
+    </div>
+    <div class="price-card">
+      <span class="plan-dur">12 Months</span>
+      <div class="plan-amt"><sup>₹</sup>12,000</div>
+      <p class="plan-per">for 12 months</p>
+    </div>
+  </div>
+</section>
+
+<!-- FAQ -->
+<section class="faq">
+  <span class="tag">FAQ</span>
+  <h2 class="sec-title">Questions you might have</h2>
+  <div class="faq-grid">
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Is this only for PCOS? <span class="arrow">▾</span></div><p class="faq-a">No, but it's designed especially for women with hormonal imbalance. Anyone looking for gentle women's wellness support is welcome.</p></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Will this be intense? <span class="arrow">▾</span></div><p class="faq-a">Not at all. These classes are gentle and beginner-friendly. The focus is on consistency and healing, not intensity.</p></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Do I need prior yoga experience? <span class="arrow">▾</span></div><p class="faq-a">Not at all. Complete beginners are very welcome. Preethi guides every step clearly in Tamil.</p></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What language are classes in? <span class="arrow">▾</span></div><p class="faq-a">Classes are conducted in Tamil, making it comfortable and accessible for Tamil-speaking women.</p></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">How are the classes taken? <span class="arrow">▾</span></div><p class="faq-a">Live sessions via Zoom. You join from home with just your mat and a stable internet connection.</p></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Will recordings be available? <span class="arrow">▾</span></div><p class="faq-a">No — this is a live-only programme to help you stay consistent and build a real routine. Being present is part of the practice.</p></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">How many sessions per month? <span class="arrow">▾</span></div><p class="faq-a">16 regular sessions + 2 bonus sessions every month — 18 live classes in total.</p></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Can I join anytime? <span class="arrow">▾</span></div><p class="faq-a">Yes! You can join any ongoing batch on any day. No need to wait for a new batch to start.</p></div>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact" id="contact">
+  <div class="contact-inner">
+    <span class="tag">Get in touch</span>
+    <h2 class="sec-title">Ready to begin?</h2>
+    <p class="contact-sub">Reach out on WhatsApp or give us a call. Preethi personally responds to every enquiry 🤎</p>
+    <div class="cd-row"><span class="cd-label">WhatsApp / Phone</span><span class="cd-val">+91 78455 37403</span></div>
+    <div class="cd-row"><span class="cd-label">Platform</span><span class="cd-val">Live on Zoom</span></div>
+    <div class="cd-row"><span class="cd-label">Language</span><span class="cd-val">Tamil medium</span></div>
+    <div class="cd-row"><span class="cd-label">Batch timings</span><span class="cd-val">6:00 am · 10:30 am · 6:30 pm</span></div>
+    <div class="contact-ctas">
+      <a class="cta-wa" href="https://wa.me/917845537403" target="_blank">
+        <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+        WhatsApp us
+      </a>
+      <a class="cta-call" href="tel:+917845537403">📞 Call us</a>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span class="footer-logo">Vidvas Yoga</span>
+  <div class="footer-links">
+    <a href="#about">About</a><a href="#classes">Classes</a>
+    <a href="#wellness">Wellness</a><a href="#pricing">Pricing</a><a href="#contact">Contact</a>
+  </div>
+  <span class="footer-copy">© 2026 Vidvas Yoga · Preethi. All rights reserved.</span>
+</footer>
+
+<script>
+function toggleFaq(el){
+  const isOpen=el.classList.contains('open');
+  document.querySelectorAll('.faq-item').forEach(i=>i.classList.remove('open'));
+  if(!isOpen)el.classList.add('open');
+}
+</script>
+</body>
+</html>
