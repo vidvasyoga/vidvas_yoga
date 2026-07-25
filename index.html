@@ -4,7 +4,11 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Vidvas Yoga · Preethi</title>
-<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<meta name="description" content="Live online yoga classes in Tamil for women — hormonal balance, PMOS (PCOS) support, pregnancy care & emotional wellness. 4 daily batches, join any day. Taught by Preethi.">
+<meta property="og:title" content="Vidvas Yoga · Preethi">
+<meta property="og:description" content="Live online yoga classes in Tamil for women's wellness — join any ongoing batch, any day.">
+<meta property="og:type" content="website">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,700;1,500&family=DM+Sans:wght@400;500;600&family=Fraunces:opsz,wght@9..144,500;9..144,600;9..144,700;9..144,900&display=swap" rel="stylesheet">
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0;}
 :root{
@@ -58,13 +62,14 @@ nav{
 .timings-label{font-size:0.68rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--rose);margin-bottom:1rem;display:block;}
 .timing-rows{display:flex;flex-direction:column;gap:0.75rem;}
 .timing-row-item{display:flex;align-items:center;justify-content:space-between;padding:0.75rem 1rem;background:var(--rose-pale);border:1px solid rgba(196,120,90,0.15);border-radius:8px;}
-.tr-time{font-size:0.9rem;font-weight:600;color:var(--bark);}
+.tr-time{font-family:'Fraunces',serif;font-optical-sizing:auto;font-size:1.05rem;font-weight:600;color:var(--bark);}
 .tr-badge{font-size:0.65rem;font-weight:600;letter-spacing:0.08em;text-transform:uppercase;color:var(--rose);background:var(--rose-light);padding:0.25rem 0.7rem;border-radius:30px;}
 .timings-note{font-size:0.75rem;font-weight:400;color:var(--muted);margin-top:1rem;text-align:center;}
 .batch-info-card{background:var(--bark);border-radius:14px;padding:1.5rem 1.8rem;display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;}
 .bic-item{display:flex;flex-direction:column;gap:3px;}
 .bic-label{font-size:0.62rem;font-weight:600;letter-spacing:0.12em;text-transform:uppercase;color:rgba(255,252,250,0.4);}
-.bic-val{font-size:0.85rem;font-weight:500;color:rgba(255,252,250,0.85);}
+.bic-val{font-family:'Fraunces',serif;font-optical-sizing:auto;font-size:1rem;font-weight:600;color:rgba(255,252,250,0.9);}
+.bic-price small{font-family:'DM Sans',sans-serif;font-weight:400;font-size:0.68rem;letter-spacing:0.02em;color:rgba(255,252,250,0.55);margin-left:3px;}
 
 /* COMMON */
 section{padding:4rem 5rem;}
@@ -75,7 +80,7 @@ section{padding:4rem 5rem;}
 /* STATS */
 .stats-band{background:var(--rose);padding:2.5rem 5rem;display:grid;grid-template-columns:repeat(4,1fr);gap:2rem;}
 .stat-card{text-align:center;}
-.stat-card .big{font-family:'Playfair Display',serif;font-size:2.8rem;font-weight:700;color:var(--white);display:block;line-height:1;margin-bottom:0.4rem;}
+.stat-card .big{font-family:'Fraunces',serif;font-optical-sizing:auto;font-size:2.9rem;font-weight:600;color:var(--white);display:block;line-height:1;margin-bottom:0.4rem;letter-spacing:-0.01em;}
 .stat-card .desc{font-size:0.78rem;font-weight:400;color:rgba(255,252,250,0.75);line-height:1.6;}
 
 /* WHY YOGA */
@@ -138,7 +143,7 @@ section{padding:4rem 5rem;}
 .pop-label{position:absolute;top:-12px;left:50%;transform:translateX(-50%);background:var(--bark);color:var(--white);font-size:0.62rem;font-weight:600;letter-spacing:0.1em;text-transform:uppercase;padding:0.25rem 0.85rem;border-radius:30px;white-space:nowrap;}
 .plan-dur{font-size:0.7rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--rose);margin-bottom:1rem;display:block;}
 .price-card.pop .plan-dur{color:rgba(255,252,250,0.75);}
-.plan-amt{font-family:'Playfair Display',serif;font-size:2.4rem;font-weight:700;color:var(--bark);line-height:1;}
+.plan-amt{font-family:'Fraunces',serif;font-optical-sizing:auto;font-size:2.5rem;font-weight:600;color:var(--bark);line-height:1;letter-spacing:-0.01em;}
 .price-card.pop .plan-amt{color:var(--white);}
 .plan-amt sup{font-size:1rem;vertical-align:super;}
 .plan-per{font-size:0.72rem;font-weight:400;color:var(--muted);margin:0.4rem 0 1.2rem;}
@@ -170,7 +175,7 @@ section{padding:4rem 5rem;}
 .contact-sub{font-size:0.92rem;font-weight:400;line-height:1.9;color:var(--muted);margin-bottom:2rem;max-width:420px;}
 .cd-row{display:flex;flex-direction:column;gap:3px;margin-bottom:1.1rem;}
 .cd-label{font-size:0.65rem;font-weight:600;letter-spacing:0.15em;text-transform:uppercase;color:var(--rose);}
-.cd-val{font-size:0.9rem;font-weight:400;color:var(--muted);}
+.cd-val{font-family:'Fraunces',serif;font-optical-sizing:auto;font-size:1rem;font-weight:600;color:var(--bark);}
 .contact-ctas{display:flex;gap:1rem;margin-top:2rem;flex-wrap:wrap;}
 .cta-wa{display:inline-flex;align-items:center;gap:8px;font-size:0.78rem;font-weight:600;letter-spacing:0.07em;text-transform:uppercase;text-decoration:none;background:var(--rose);color:var(--white);padding:0.85rem 1.8rem;border-radius:30px;transition:background 0.3s;}
 .cta-wa:hover{background:#a85f44;}
@@ -230,20 +235,21 @@ footer{background:var(--bark);padding:2.5rem 5rem;display:flex;align-items:cente
 <div class="hero">
   <div class="hero-left">
     <span class="hero-for">🌸 A space made for women · Tamil medium · Live on Zoom</span>
-    <h1 class="hero-title">You are in a<br><em>right place</em></h1>
+    <h1 class="hero-title">You are in the<br><em>right place</em></h1>
     <p class="hero-sub">Irregular cycles, weight that won't shift, mood swings you can't explain — this isn't your fault. Your body just needs the right support. That's exactly what this space offers.</p>
     <div class="for-whom">
-      <div class="for-item"><div class="for-dot"></div>Women with PCOS or hormonal imbalance</div>
+      <div class="for-item"><div class="for-dot"></div>A way to connect with your soul, not just your body</div>
+      <div class="for-item"><div class="for-dot"></div>Built on balance, flexibility, mobility & strength</div>
+      <div class="for-item"><div class="for-dot"></div>Women with PMOS (PCOS) or hormonal imbalance</div>
       <div class="for-item"><div class="for-dot"></div>Those struggling with weight or low energy</div>
       <div class="for-item"><div class="for-dot"></div>Anyone feeling emotionally drained or burnt out</div>
       <div class="for-item"><div class="for-dot"></div>Complete beginners — no experience needed at all</div>
-      <div class="for-item"><div class="for-dot"></div>General yoga for fitness · Balance · Strength</div>
+      <div class="for-item"><div class="for-dot"></div>Anyone looking for general fitness through yoga</div>
     </div>
     <div class="class-pills">
       <span class="cpill">🧘‍♀️ Asana</span>
       <span class="cpill">🌬️ Pranayama</span>
       <span class="cpill">🧠 Meditation</span>
-      <span class="cpill">✨ Face yoga</span>
       <span class="cpill">💆 Therapeutic yoga</span>
       <span class="cpill">🥗 Food & lifestyle</span>
     </div>
@@ -251,14 +257,18 @@ footer{background:var(--bark);padding:2.5rem 5rem;display:flex;align-items:cente
 
   <div class="hero-right">
     <div class="timings-card">
-      <span class="timings-label">Live batch timings · Join any day</span>
+      <span class="timings-label">Live batch timings · 4 batches daily · Join any day</span>
       <div class="timing-rows">
+        <div class="timing-row-item">
+          <span class="tr-time">5:00 – 6:00 am</span>
+          <span class="tr-badge">Sunrise</span>
+        </div>
         <div class="timing-row-item">
           <span class="tr-time">6:00 – 7:00 am</span>
           <span class="tr-badge">Early morning</span>
         </div>
         <div class="timing-row-item">
-          <span class="tr-time">10:30 – 11:30 am</span>
+          <span class="tr-time">10:00 – 11:00 am</span>
           <span class="tr-badge">Mid-morning</span>
         </div>
         <div class="timing-row-item">
@@ -269,19 +279,19 @@ footer{background:var(--bark);padding:2.5rem 5rem;display:flex;align-items:cente
       <p class="timings-note">You can join any ongoing batch on any day 🤎</p>
     </div>
     <div class="batch-info-card">
-      <div class="bic-item"><span class="bic-label">Sessions / month</span><span class="bic-val">16 + 2 bonus</span></div>
+      <div class="bic-item"><span class="bic-label">Sessions / month</span><span class="bic-val">16 + 2 bonus sessions</span></div>
       <div class="bic-item"><span class="bic-label">Platform</span><span class="bic-val">Live on Zoom</span></div>
       <div class="bic-item"><span class="bic-label">Language</span><span class="bic-val">Tamil</span></div>
-      <div class="bic-item"><span class="bic-label">Starting at</span><span class="bic-val">₹1,650 / mo</span></div>
+      <div class="bic-item"><span class="bic-label">Starting at</span><span class="bic-val bic-price">₹2,000<small>/month</small></span></div>
     </div>
   </div>
 </div>
 
 <!-- STATS -->
 <div class="stats-band">
-  <div class="stat-card"><span class="big">1000+</span><p class="desc">Women trained and supported on their wellness journey</p></div>
-  <div class="stat-card"><span class="big">98%</span><p class="desc">Success rate in pregnancy outcomes among dedicated students</p></div>
-  <div class="stat-card"><span class="big">99%</span><p class="desc">PCOS reversal for students who practised consistently</p></div>
+  <div class="stat-card"><span class="big">2000+</span><p class="desc">Women trained and supported on their wellness journey</p></div>
+  <div class="stat-card"><span class="big">98%</span><p class="desc">Students reporting smoother pregnancies with dedicated practice</p></div>
+  <div class="stat-card"><span class="big">99%</span><p class="desc">Students with PMOS (PCOS) reporting improved symptoms with consistent practice</p></div>
   <div class="stat-card"><span class="big">99%</span><p class="desc">Improved emotional stability and better sleep cycle</p></div>
 </div>
 <div style="background:var(--rose);padding:0 5rem 2rem;text-align:center;">
@@ -311,8 +321,8 @@ footer{background:var(--bark);padding:2.5rem 5rem;display:flex;align-items:cente
     </div>
     <div class="about-visual">
       <p class="av-title">Our specialities 🌸</p>
-      <p class="av-sub">You didn't come here just to stretch — you came here to feel lighter inside. This space is ours.</p>
-      <div class="av-item"><div class="av-dot"></div>Reverse PCOS naturally</div>
+      <p class="av-sub">A gentle, supportive space to care for your body and mind — built around you.</p>
+      <div class="av-item"><div class="av-dot"></div>Natural support for PMOS (PCOS)</div>
       <div class="av-item"><div class="av-dot"></div>Hormonal balance & cycle health</div>
       <div class="av-item"><div class="av-dot"></div>Emotional stability & calm</div>
       <div class="av-item"><div class="av-dot"></div>Weight management</div>
@@ -329,7 +339,6 @@ footer{background:var(--bark);padding:2.5rem 5rem;display:flex;align-items:cente
       <div class="class-card"><div class="cc-icon">🧘‍♀️</div><h3>Asana</h3></div>
       <div class="class-card"><div class="cc-icon">🌬️</div><h3>Pranayama</h3></div>
       <div class="class-card"><div class="cc-icon">🧠</div><h3>Meditation</h3></div>
-      <div class="class-card"><div class="cc-icon">✨</div><h3>Face yoga</h3></div>
       <div class="class-card"><div class="cc-icon">💆‍♀️</div><h3>Therapeutic yoga</h3></div>
       <div class="class-card"><div class="cc-icon">🥗</div><h3>Food & lifestyle</h3></div>
     </div>
@@ -344,7 +353,7 @@ footer{background:var(--bark);padding:2.5rem 5rem;display:flex;align-items:cente
   <p class="wellness-intro" style="font-weight:600;color:var(--bark);font-size:0.9rem;margin-bottom:1rem;">This batch is for women dealing with:</p>
   <div class="concern-list" style="max-width:560px;">
     <div class="concern-item"><div class="cdot"></div>Irregular menstrual cycles</div>
-    <div class="concern-item"><div class="cdot"></div>PCOS & hormonal imbalance</div>
+    <div class="concern-item"><div class="cdot"></div>PMOS (PCOS) & hormonal imbalance</div>
     <div class="concern-item"><div class="cdot"></div>Infertility concerns</div>
     <div class="concern-item"><div class="cdot"></div>Unexplained weight gain</div>
     <div class="concern-item"><div class="cdot"></div>Mood swings & emotional burnout</div>
@@ -361,6 +370,8 @@ footer{background:var(--bark);padding:2.5rem 5rem;display:flex;align-items:cente
   </div>
 </div>
 
+
+
 <!-- PRICING -->
 <section class="pricing" id="pricing">
   <span class="tag">Membership plans</span>
@@ -369,13 +380,13 @@ footer{background:var(--bark);padding:2.5rem 5rem;display:flex;align-items:cente
   <div class="pricing-grid">
     <div class="price-card">
       <span class="plan-dur">Monthly</span>
-      <div class="plan-amt"><sup>₹</sup>1,650</div>
+      <div class="plan-amt"><sup>₹</sup>2,000</div>
       <p class="plan-per">per month</p>
     </div>
     <div class="price-card pop">
       <span class="pop-label">Best value</span>
       <span class="plan-dur">3 Months</span>
-      <div class="plan-amt"><sup>₹</sup>4,499</div>
+      <div class="plan-amt"><sup>₹</sup>4,800</div>
       <p class="plan-per">for 3 months</p>
     </div>
     <div class="price-card">
@@ -396,7 +407,7 @@ footer{background:var(--bark);padding:2.5rem 5rem;display:flex;align-items:cente
   <span class="tag">FAQ</span>
   <h2 class="sec-title">Questions you might have</h2>
   <div class="faq-grid">
-    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Is this only for PCOS? <span class="arrow">▾</span></div><p class="faq-a">No, but it's designed especially for women with hormonal imbalance. Anyone looking for gentle women's wellness support is welcome.</p></div>
+    <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Is this only for PMOS (PCOS)? <span class="arrow">▾</span></div><p class="faq-a">No, but it's designed especially for women with hormonal imbalance. Anyone looking for gentle women's wellness support is welcome.</p></div>
     <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Will this be intense? <span class="arrow">▾</span></div><p class="faq-a">Not at all. These classes are gentle and beginner-friendly. The focus is on consistency and healing, not intensity.</p></div>
     <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">Do I need prior yoga experience? <span class="arrow">▾</span></div><p class="faq-a">Not at all. Complete beginners are very welcome. Preethi guides every step clearly in Tamil.</p></div>
     <div class="faq-item" onclick="toggleFaq(this)"><div class="faq-q">What language are classes in? <span class="arrow">▾</span></div><p class="faq-a">Classes are conducted in Tamil, making it comfortable and accessible for Tamil-speaking women.</p></div>
@@ -416,7 +427,7 @@ footer{background:var(--bark);padding:2.5rem 5rem;display:flex;align-items:cente
     <div class="cd-row"><span class="cd-label">WhatsApp / Phone</span><span class="cd-val">+91 78455 37403</span></div>
     <div class="cd-row"><span class="cd-label">Platform</span><span class="cd-val">Live on Zoom</span></div>
     <div class="cd-row"><span class="cd-label">Language</span><span class="cd-val">Tamil medium</span></div>
-    <div class="cd-row"><span class="cd-label">Batch timings</span><span class="cd-val">6:00 am · 10:30 am · 6:30 pm</span></div>
+    <div class="cd-row"><span class="cd-label">Batch timings</span><span class="cd-val">5:00 am · 6:00 am · 10:00 am · 6:30 pm</span></div>
     <div class="contact-ctas">
       <a class="cta-wa" href="https://wa.me/917845537403" target="_blank">
         <svg width="15" height="15" viewBox="0 0 24 24" fill="white"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
